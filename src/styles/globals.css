@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-gray-90 dark:text-white;
+    @apply text-gray-90 dark:text-white bg-gradient-to-b from-[#fde5cc] to-white dark:from-[#431c75] dark:to-[#111111];
   }
 
   #__next {
