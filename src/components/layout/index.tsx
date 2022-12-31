@@ -1,8 +1,17 @@
-const Layout = () => {
+import Header from './Header';
+import Footer from './Footer';
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
-      <p>Layout component</p>
-    </div>
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
   );
 };
 
