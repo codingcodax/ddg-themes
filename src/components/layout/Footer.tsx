@@ -1,8 +1,18 @@
 const Footer = () => {
   return (
-    <div>
-      <p>Footer</p>
-    </div>
+    <footer className='mt-16 px-4 pb-2'>
+      <div className='h-px w-full bg-gray-90/20 dark:bg-white/20' />
+      <p className='mt-8'>
+        Crafted by{' '}
+        <a
+          href='https://www.codingcodax.dev/'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
+          @codingcodax
+        </a>
+      </p>
+    </footer>
   );
 };
 
