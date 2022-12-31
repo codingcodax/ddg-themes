@@ -10,6 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@anatoliygatt/use-prefers-color-scheme": "^1.0.7",
     "@next/font": "^13.1.1",
     "next": "13.1.1",
     "react": "18.2.0",
