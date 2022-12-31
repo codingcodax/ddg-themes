@@ -15,3 +15,9 @@
     @apply text-4xl font-bold;
   }
 }
+
+@layer components {
+  .primary-button {
+    @apply inline-flex rounded-lg items-center px-5 h-11 justify-center border border-transparent bg-blue-50 text-center font-bold text-white hover:bg-blue-60 dark:text-gray-90 dark:bg-blue-30 dark:hover:bg-blue-40;
+  }
+}
