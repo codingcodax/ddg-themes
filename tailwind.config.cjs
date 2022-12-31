@@ -5,7 +5,6 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       white: 'white',
-      base: 'rgb(var(--gray-90) / <alpha-value>)',
       'gray-90': '#222',
       'blue-30': '#7295f6',
       'blue-40': '#557ff3',
