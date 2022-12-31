@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-90 dark:text-white;
+  }
+
+  #__next {
+    @apply grid min-h-screen grid-rows-[auto_1fr_auto];
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+}
