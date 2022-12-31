@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Home: NextPage = () => {
   return (
-    <main className='mx-auto mt-16 grid before:absolute before:top-0 before:-z-10 before:h-screen before:w-screen before:bg-gradient-to-b  before:from-[#fde5cc] before:to-white dark:before:from-[#431c75] dark:before:to-[#111111]'>
+    <main className='mx-auto mt-16 grid gap-16'>
       <section className='mx-auto max-w-[400px] text-center'>
         <h1>
           Your browser,
