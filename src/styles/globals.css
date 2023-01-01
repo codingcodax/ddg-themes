@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-gray-90 dark:text-white bg-gradient-to-b from-[#fde5cc] to-white dark:from-[#431c75] dark:to-[#111111];
+    @apply bg-gradient-to-b from-[#fde5cc] to-white text-gray-90 dark:from-[#431c75] dark:to-[#111111] dark:text-white;
   }
 
   #__next {
@@ -14,10 +14,14 @@
   h1 {
     @apply text-4xl font-bold md:text-5xl;
   }
+
+  h2 {
+    @apply text-2xl font-bold md:text-4xl;
+  }
 }
 
 @layer components {
   .primary-button {
-    @apply inline-flex rounded-lg items-center px-5 h-11 justify-center border border-transparent bg-blue-50 text-center font-bold text-white hover:bg-blue-60 dark:text-gray-90 dark:bg-blue-30 dark:hover:bg-blue-40;
+    @apply inline-flex h-11 items-center justify-center rounded-lg border border-transparent bg-blue-50 px-5 text-center font-bold text-white hover:bg-blue-60 dark:bg-blue-30 dark:text-gray-90 dark:hover:bg-blue-40;
   }
 }
