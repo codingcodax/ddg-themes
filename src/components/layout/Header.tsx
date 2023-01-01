@@ -9,7 +9,7 @@ const Header = () => {
   console.log(prefersColorScheme);
 
   return (
-    <header className='py-2 px-4'>
+    <header className='px-4 pt-2 md:px-10 md:pt-8 lg:px-16'>
       <Link href='/'>
         <Image
           alt='duck duck go themes logo'
