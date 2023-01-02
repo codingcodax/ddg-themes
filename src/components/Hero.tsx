@@ -15,7 +15,7 @@ const Hero = () => {
           themes and install it.
         </p>
 
-        <Link className='primary-button mt-8' href='/themes'>
+        <Link className='primary-button mt-8' href='#themes'>
           Explore the Themes
         </Link>
       </section>
