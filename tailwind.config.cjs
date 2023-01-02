@@ -10,6 +10,7 @@ module.exports = {
       'blue-40': '#557ff3',
       'blue-50': '#3969ef',
       'blue-60': '#2b55ca',
+      'violet-70': '#342e42',
     },
     extend: {},
   },
