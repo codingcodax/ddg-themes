@@ -2,7 +2,7 @@ import ThemesData from '~/data/themes';
 
 import Theme from './Theme';
 
-const Themes = ({ }) => {
+const Themes = () => {
   return (
     <section className='mx-auto mt-16 w-full max-w-screen-lg px-4 md:px-8 lg:px-16'>
       <h2 className='mb-10 text-center md:mb-8 md:text-left' id='themes'>
