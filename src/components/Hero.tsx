@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <main className='mx-auto mt-16 grid min-h-[70vh] w-full max-w-screen-lg gap-y-16 gap-x-10 px-4 md:grid-cols-2 md:px-8 lg:px-16'>
+    <main className='mx-auto mt-16 grid min-h-[70vh] w-full max-w-screen-lg gap-y-16 gap-x-10 px-4 before:absolute before:top-0 before:left-0 before:-z-10 before:h-screen before:min-h-[800px]  before:w-screen before:bg-gradient-to-b before:from-[#fde5cc] before:to-white dark:before:from-[#431c75] dark:before:to-[#111111] md:grid-cols-2 md:px-8 lg:px-16'>
       <section className='mx-auto max-w-[400px] text-center md:flex md:max-w-none md:flex-col md:items-start md:justify-center md:text-left'>
         <h1>
           Your browser,
