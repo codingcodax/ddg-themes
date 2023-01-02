@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
-    @apply bg-gradient-to-b from-[#fde5cc] to-white text-gray-90 dark:from-[#431c75] dark:to-[#111111] dark:text-white;
+    @apply bg-white text-gray-90 dark:bg-[#111111] dark:text-white;
   }
 
   #__next {
