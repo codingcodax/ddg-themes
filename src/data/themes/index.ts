@@ -1,5 +1,6 @@
 import cyberpunk from './cyberpunk';
 import dracula from './dracula';
+import gruvboxDark from './gruvbox-dark';
 import hack from './hack';
 import navyTurquoise from './navyTurquoise';
 import neon from './neon';
@@ -10,6 +11,7 @@ import titanium from './titanium';
 const Themes = [
   cyberpunk,
   dracula,
+  gruvboxDark,
   hack,
   navyTurquoise,
   neon,
