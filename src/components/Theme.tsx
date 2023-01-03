@@ -4,29 +4,35 @@ type ThemeProps = ThemeType;
 
 const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
   return (
-    <li className='grid overflow-clip rounded-lg bg-white dark:bg-violet-70'>
+    <li className='grid overflow-clip rounded-lg bg-white shadow-[0_0.125rem_0.375rem_rgba(0,0,0,0.1),_0_0.5rem_1rem_rgba(0,0,0,0.08)] dark:bg-violet-70'>
       <div className='aspect-video bg-white' />
       <div className='p-4'>
-        <div className='flex justify-between'>
-          <h4 className='font-bold'>{name}</h4>
+        <h4 className='font-bold'>{name}</h4>
+        <div className='flex items-center justify-between'>
+          <p className=''>Color Palette:</p>
+          <div className='flex items-center space-x-1'>
+            {palette.map((color) => (
+              <span
+                key={color}
+                className={`inline-block h-4 w-4 rounded-sm border`}
+                style={{ backgroundColor: color }}
+              ></span>
+            ))}
+          </div>
+        </div>
+        <div className='mt-3 grid gap-y-2'>
           <a
-            className='primary-link'
+            className='ghost-button text-sm'
             href={`https://duckduckgo.com/?k${cookie.split('; ').join('&k')}`}
             rel='noopener noreferrer'
             target='_blank'
           >
             Live Preview
           </a>
-        </div>
-        <div className='mt-1 flex items-center space-x-2'>
-          <p className='mr-1'>Color Palette:</p>
-          {palette.map((color) => (
-            <span
-              key={color}
-              className={`inline-block h-4 w-4 rounded-sm border`}
-              style={{ backgroundColor: color }}
-            ></span>
-          ))}
+
+          <button className='ghost-button text-sm' type='button'>
+            Get Theme
+          </button>
         </div>
       </div>
     </li>
