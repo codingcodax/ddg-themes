@@ -6,8 +6,6 @@ const Header = () => {
   const prefersColorScheme = usePrefersColorScheme({ ssr: true });
   const isDarkMode = prefersColorScheme === 'dark';
 
-  console.log(prefersColorScheme);
-
   return (
     <header className='px-4 pt-2 md:px-10 md:pt-8 lg:px-16'>
       <Link href='/'>
