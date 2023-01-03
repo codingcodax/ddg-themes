@@ -4,8 +4,8 @@ const cyberpunk: Theme = {
   name: 'Cyberpunk',
   screenshot: '',
   cookie:
-    '7=101116; j=FF0055; 9=FF0055; aa=9254b5; 8=785eef%20; x=FFFC58; 21=FFFC58; ',
-  palette: ['#101116', '#ff0055', '#9254b5', '#785eef', '#fffc58'],
+    '7=261d45; j=372963; 9=0084ff; aa=3d5afe; 8=bbbbbb; x=00ff9c; 21=372963;',
+  palette: ['#261d45', '#372963', '#0084ff', '#3d5afe', '#bbbbbb', '#00ff9c'],
 };
 
 export default cyberpunk;
