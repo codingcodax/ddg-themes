@@ -39,7 +39,10 @@ const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
         <div className='mt-3 grid gap-y-2'>
           <a
             className='ghost-button flex items-center text-sm'
-            href={`https://duckduckgo.com/?k${cookie.split('; ').join('&k')}`}
+            href={`https://duckduckgo.com/?k${cookie
+              .slice(0, -1)
+              .split('; ')
+              .join('&k')}`}
             rel='noopener noreferrer'
             target='_blank'
           >
