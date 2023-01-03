@@ -3,8 +3,9 @@ import type { Theme } from '~/types';
 const gruvboxDark: Theme = {
   name: 'Gruvbox Dark',
   screenshot: '',
-  cookie: 'j=32302f; 9=fe8019; aa=282828; 8=fbf1c7; x=d79921; 21=32302f;',
-  palette: ['#32302f', '#fe8019', '#282828', '#fbf1c7', '#d79921'],
+  cookie:
+    '7=282828;, j=282828; 9=fe8019; aa=f9bc2e; 8=fbf1c7; x=b7ba25; 21=3b3735;',
+  palette: ['#282828', '#fe8019', '#f9bc2e', '#fbf1c7', '#b7ba25', '#3b3735'],
 };
 
 export default gruvboxDark;
