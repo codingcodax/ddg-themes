@@ -21,7 +21,7 @@ const setCookies = (cookieJson) => {
   });
 };
 
-alert('The NAME theme will be applied, are you sure?');
+alert('The NAME theme will be applied.');
 
 // Call set cookies, passing in formated cookie data
 setCookies(cookieToJSON(cookie));
