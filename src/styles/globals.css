@@ -29,6 +29,10 @@
     @apply inline-flex h-11 items-center justify-center rounded-lg border border-transparent bg-blue-50 px-5 text-center font-bold text-white hover:bg-blue-60 dark:bg-blue-30 dark:text-gray-90 dark:hover:bg-blue-40;
   }
 
+  .ghost-button {
+    @apply inline-flex h-11 items-center justify-center rounded-lg border border-black/30 bg-transparent px-3 text-center font-bold text-blue-50 hover:bg-blue-60/20 hover:text-blue-60 dark:border-black/40 dark:text-blue-30 dark:hover:bg-blue-40/20 dark:hover:text-blue-40;
+  }
+
   .primary-link {
     @apply font-bold text-blue-50 hover:text-blue-60 dark:text-blue-30 dark:hover:text-blue-40;
   }
