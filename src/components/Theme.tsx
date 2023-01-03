@@ -1,5 +1,7 @@
 import type { Theme as ThemeType } from '~/types';
 
+import Icons from './icons';
+
 type ThemeProps = ThemeType;
 
 const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
@@ -22,16 +24,19 @@ const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
         </div>
         <div className='mt-3 grid gap-y-2'>
           <a
-            className='ghost-button text-sm'
+            className='ghost-button flex items-center text-sm'
             href={`https://duckduckgo.com/?k${cookie.split('; ').join('&k')}`}
             rel='noopener noreferrer'
             target='_blank'
           >
-            Live Preview
+            Live Preview <Icons.OpenNewWindow className='ml-2 h-4 w-4' />
           </a>
 
-          <button className='ghost-button text-sm' type='button'>
-            Get Theme
+          <button
+            className='ghost-button flex items-center text-sm'
+            type='button'
+          >
+            Get Theme <Icons.Copy className='ml-2 h-4 w-4' />
           </button>
         </div>
       </div>
