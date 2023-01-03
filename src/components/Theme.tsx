@@ -1,10 +1,24 @@
+import { useState } from 'react';
+
 import type { Theme as ThemeType } from '~/types';
+import { applyTheme, copyToClipboard } from '~/utils';
 
 import Icons from './icons';
 
 type ThemeProps = ThemeType;
 
 const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = () => {
+    copyToClipboard(applyTheme.replace('COOKIE', cookie).replace('NAME', name));
+    setIsCopied(true);
+
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1000);
+  };
+
   return (
     <li className='grid overflow-clip rounded-lg bg-white shadow-[0_0.125rem_0.375rem_rgba(0,0,0,0.1),_0_0.5rem_1rem_rgba(0,0,0,0.08)] dark:bg-violet-70'>
       <div className='aspect-video bg-white' />
@@ -33,10 +47,24 @@ const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
           </a>
 
           <button
-            className='ghost-button flex items-center text-sm'
+            className={`ghost-button flex items-center text-sm ${
+              isCopied
+                ? 'cursor-not-allowed text-green-50 hover:bg-green-60/20 hover:text-green-60 dark:text-green-30 dark:hover:bg-green-40/20 dark:hover:text-green-40'
+                : ''
+            }`}
+            disabled={isCopied}
             type='button'
+            onClick={handleCopy}
           >
-            Get Theme <Icons.Copy className='ml-2 h-4 w-4' />
+            {isCopied ? (
+              <>
+                Copied <Icons.Check className='ml-2 h-4 w-4' />
+              </>
+            ) : (
+              <>
+                Get Theme <Icons.Copy className='ml-2 h-4 w-4' />
+              </>
+            )}
           </button>
         </div>
       </div>
