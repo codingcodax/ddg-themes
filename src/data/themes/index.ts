@@ -1,4 +1,5 @@
 import cyberpunk from './cyberpunk';
+import cyberpunkScarlet from './cyberpunkScarlet';
 import cyberpunkUmbra from './cyberpunkUmbra';
 import dracula from './dracula';
 import gruvboxDark from './gruvbox-dark';
@@ -12,6 +13,7 @@ import titanium from './titanium';
 
 const Themes = [
   cyberpunk,
+  cyberpunkScarlet,
   cyberpunkUmbra,
   dracula,
   gruvboxDark,
