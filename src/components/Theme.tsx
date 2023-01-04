@@ -8,7 +8,7 @@ import Icons from './icons';
 
 type ThemeProps = ThemeType;
 
-const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
+const Theme = ({ name, cookie, palette }: ThemeProps) => {
   const [isCopied, setIsCopied] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
