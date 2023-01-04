@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useState } from 'react';
 
 import type { Theme as ThemeType } from '~/types';
@@ -9,6 +10,7 @@ type ThemeProps = ThemeType;
 
 const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
   const [isCopied, setIsCopied] = useState(false);
+  const [isHover, setIsHover] = useState(false);
 
   const handleCopy = () => {
     copyToClipboard(applyTheme.replace('COOKIE', cookie).replace('NAME', name));
@@ -20,8 +22,24 @@ const Theme = ({ name, screenshot, cookie, palette }: ThemeProps) => {
   };
 
   return (
-    <li className='grid overflow-clip rounded-lg bg-white shadow-[0_0.125rem_0.375rem_rgba(0,0,0,0.1),_0_0.5rem_1rem_rgba(0,0,0,0.08)] dark:bg-violet-70'>
-      <div className='aspect-video bg-white' />
+    <li
+      className='grid overflow-clip rounded-lg bg-white shadow-[0_0.125rem_0.375rem_rgba(0,0,0,0.1),_0_0.5rem_1rem_rgba(0,0,0,0.08)] dark:bg-violet-70'
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+    >
+      <figure className='aspect-video overflow-clip bg-white'>
+        <Image
+          alt={`${name} theme preview`}
+          className='aspect-video object-cover object-top'
+          height={720}
+          src={`/images/themes/${
+            !isHover
+              ? name.toLowerCase().replace(' ', '-')
+              : name.toLowerCase().replace(' ', '-') + '-results'
+          }.png`}
+          width={1280}
+        />
+      </figure>
       <div className='p-4'>
         <h4 className='font-bold'>{name}</h4>
         <div className='flex items-center justify-between'>
