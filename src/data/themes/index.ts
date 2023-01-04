@@ -9,7 +9,6 @@ import navyTurquoise from './navyTurquoise';
 import neon from './neon';
 import nord from './nord';
 import retro from './retro';
-import titanium from './titanium';
 
 const Themes = [
   cyberpunk,
@@ -23,7 +22,6 @@ const Themes = [
   neon,
   nord,
   retro,
-  titanium,
 ];
 
 export default Themes;
