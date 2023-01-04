@@ -1,6 +1,7 @@
 import ayuDark from './ayu-dark';
 import ayuLight from './ayu-light';
 import ayuMirage from './ayu-mirage';
+import catppuccinLatte from './catppuccin';
 import cyberpunk from './cyberpunk';
 import cyberpunkScarlet from './cyberpunkScarlet';
 import cyberpunkUmbra from './cyberpunkUmbra';
@@ -17,6 +18,7 @@ const Themes = [
   ayuDark,
   ayuLight,
   ayuMirage,
+  catppuccinLatte,
   cyberpunk,
   cyberpunkScarlet,
   cyberpunkUmbra,
