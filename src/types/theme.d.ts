@@ -1,8 +1,8 @@
 type Theme = {
   name: string;
-  screenshot: string;
   cookie: string;
   palette: string[];
+  type: 'dark' | 'light';
 };
 
 export default Theme;
