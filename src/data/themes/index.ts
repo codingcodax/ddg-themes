@@ -1,3 +1,4 @@
+import ayuDark from './ayu-dark';
 import ayuMirage from './ayu-mirage';
 import cyberpunk from './cyberpunk';
 import cyberpunkScarlet from './cyberpunkScarlet';
@@ -12,6 +13,7 @@ import nord from './nord';
 import retro from './retro';
 
 const Themes = [
+  ayuDark,
   ayuMirage,
   cyberpunk,
   cyberpunkScarlet,
