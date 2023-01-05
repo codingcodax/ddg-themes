@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { Theme as ThemeType } from '~/types';
 
 import LivePreviewButton from './LivePreviewButton';
+import GetThemeButton from './GetThemeButton';
 
 type ThemeProps = ThemeType;
 
@@ -45,6 +46,7 @@ const Theme = ({ name, cookie, palette }: ThemeProps) => {
         </div>
         <div className='mt-3 grid gap-y-2'>
           <LivePreviewButton cookie={cookie} />
+          <GetThemeButton cookie={cookie} name={name} />
         </div>
       </div>
     </li>
