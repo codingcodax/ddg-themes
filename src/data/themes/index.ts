@@ -4,6 +4,7 @@ import ayuMirage from './ayu-mirage';
 import catppuccinFrappe from './catppuccinFrappe';
 import catppuccinLatte from './catppuccinLatte';
 import catppuccinMacchiato from './catppuccinMacchiato';
+import catppuccinMocha from './catppuccinMocha';
 import cyberpunk from './cyberpunk';
 import cyberpunkScarlet from './cyberpunkScarlet';
 import cyberpunkUmbra from './cyberpunkUmbra';
@@ -23,6 +24,7 @@ const Themes = [
   catppuccinFrappe,
   catppuccinLatte,
   catppuccinMacchiato,
+  catppuccinMocha,
   cyberpunk,
   cyberpunkScarlet,
   cyberpunkUmbra,
