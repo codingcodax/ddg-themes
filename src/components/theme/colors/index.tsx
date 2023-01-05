@@ -1,9 +1,19 @@
-import React from 'react';
+import type { Theme } from '~/types';
 
-const Colors = () => {
+interface ColorsProps {
+  palette: Theme['palette'];
+}
+
+const Colors = ({ palette }: ColorsProps) => {
   return (
-    <div>
-      <p>Colors</p>
+    <div className='flex items-center space-x-1'>
+      {palette.map((color) => (
+        <span
+          key={color}
+          className={`inline-block h-4 w-4 rounded-sm border`}
+          style={{ backgroundColor: color }}
+        ></span>
+      ))}
     </div>
   );
 };
