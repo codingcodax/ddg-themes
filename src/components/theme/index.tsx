@@ -3,8 +3,7 @@ import { useState } from 'react';
 
 import type { Theme as ThemeType } from '~/types';
 import { applyTheme, copyToClipboard } from '~/utils';
-
-import Icons from './icons';
+import { Icons } from '~/components';
 
 type ThemeProps = ThemeType;
 
