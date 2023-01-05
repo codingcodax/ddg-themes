@@ -1,6 +1,6 @@
 import ThemesData from '~/data/themes';
 
-import Theme from './Theme';
+import Theme from './theme';
 
 const Themes = () => {
   return (
