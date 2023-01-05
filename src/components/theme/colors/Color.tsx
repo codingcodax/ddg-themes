@@ -1,8 +1,14 @@
-const Color = () => {
+interface ColorProps {
+  color: string;
+}
+
+const Color = ({ color }: ColorProps) => {
   return (
-    <div>
-      <p>Color</p>
-    </div>
+    <span
+      key={color}
+      className={`inline-block h-4 w-4 rounded-sm border`}
+      style={{ backgroundColor: color }}
+    />
   );
 };
 
