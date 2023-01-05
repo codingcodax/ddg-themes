@@ -5,6 +5,7 @@ import type { Theme as ThemeType } from '~/types';
 
 import LivePreviewButton from './LivePreviewButton';
 import GetThemeButton from './GetThemeButton';
+import Colors from './colors';
 
 type ThemeProps = ThemeType;
 
@@ -34,15 +35,7 @@ const Theme = ({ name, cookie, palette }: ThemeProps) => {
         <h4 className='font-bold'>{name}</h4>
         <div className='flex items-center justify-between'>
           <p className=''>Color Palette:</p>
-          <div className='flex items-center space-x-1'>
-            {palette.map((color) => (
-              <span
-                key={color}
-                className={`inline-block h-4 w-4 rounded-sm border`}
-                style={{ backgroundColor: color }}
-              ></span>
-            ))}
-          </div>
+          <Colors palette={palette} />
         </div>
         <div className='mt-3 grid gap-y-2'>
           <LivePreviewButton cookie={cookie} />
