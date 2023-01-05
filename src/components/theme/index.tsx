@@ -2,23 +2,13 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import type { Theme as ThemeType } from '~/types';
-import { applyTheme, copyToClipboard } from '~/utils';
-import { Icons } from '~/components';
+
+import LivePreviewButton from './LivePreviewButton';
 
 type ThemeProps = ThemeType;
 
 const Theme = ({ name, cookie, palette }: ThemeProps) => {
-  const [isCopied, setIsCopied] = useState(false);
   const [isHover, setIsHover] = useState(false);
-
-  const handleCopy = () => {
-    copyToClipboard(applyTheme.replace('COOKIE', cookie).replace('NAME', name));
-    setIsCopied(true);
-
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 1000);
-  };
 
   return (
     <li
@@ -54,38 +44,7 @@ const Theme = ({ name, cookie, palette }: ThemeProps) => {
           </div>
         </div>
         <div className='mt-3 grid gap-y-2'>
-          <a
-            className='ghost-button flex items-center text-sm'
-            href={`https://duckduckgo.com/?k${cookie
-              .slice(0, -1)
-              .split('; ')
-              .join('&k')}`}
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            Live Preview <Icons.OpenNewWindow className='ml-2 h-4 w-4' />
-          </a>
-
-          <button
-            className={`ghost-button flex items-center text-sm ${
-              isCopied
-                ? 'cursor-not-allowed text-green-50 hover:bg-green-60/20 hover:text-green-60 dark:text-green-30 dark:hover:bg-green-40/20 dark:hover:text-green-40'
-                : ''
-            }`}
-            disabled={isCopied}
-            type='button'
-            onClick={handleCopy}
-          >
-            {isCopied ? (
-              <>
-                Copied <Icons.Check className='ml-2 h-4 w-4' />
-              </>
-            ) : (
-              <>
-                Get Theme <Icons.Copy className='ml-2 h-4 w-4' />
-              </>
-            )}
-          </button>
+          <LivePreviewButton cookie={cookie} />
         </div>
       </div>
     </li>
