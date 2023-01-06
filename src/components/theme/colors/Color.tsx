@@ -1,19 +1,42 @@
+import { useState } from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
+
+import { copyToClipboard } from '~/utils';
+import Icons from '~/components/icons';
 
 interface ColorProps {
   color: string;
 }
 
 const Color = ({ color }: ColorProps) => {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = () => {
+    setIsCopied(true);
+    copyToClipboard(color);
+
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1000);
+  };
+
   return (
     <TooltipPrimitive.Provider>
       <TooltipPrimitive.Root>
         <TooltipPrimitive.Trigger asChild>
-          <span
+          <button
             key={color}
-            className={`inline-block h-4 w-4 rounded border`}
+            className={`inline-flex h-4 w-4 items-center justify-center rounded border ${
+              isCopied ? 'cursor-not-allowed' : ''
+            }`}
+            disabled={isCopied}
             style={{ backgroundColor: color }}
-          />
+            onClick={handleCopy}
+          >
+            {isCopied && (
+              <Icons.Check className='h-3 w-3 stroke-[3px] mix-blend-difference invert' />
+            )}
+          </button>
         </TooltipPrimitive.Trigger>
 
         <TooltipPrimitive.Content
