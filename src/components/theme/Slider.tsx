@@ -12,7 +12,7 @@ interface SliderProps {
 const Slider = ({ name }: SliderProps) => {
   const [page, setPage] = useState(0);
 
-  const nameFormatted = name.toLowerCase().replace(' ', '-');
+  const nameFormatted = name.toLowerCase().replaceAll(' ', '-');
 
   const images = [nameFormatted, `${nameFormatted}-results`];
 
