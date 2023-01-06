@@ -22,7 +22,7 @@ const Header = () => {
           height={32}
           src={`/images/${
             isDarkMode ? 'logo-desktop-dark' : 'logo-desktop-light'
-            }.svg`}
+          }.svg`}
           width={158}
         />
       </Link>
