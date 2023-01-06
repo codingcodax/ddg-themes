@@ -15,6 +15,7 @@ import hack from './hack';
 import navyTurquoise from './navyTurquoise';
 import neon from './neon';
 import nord from './nord';
+import oneDarkPro from './oneDarkPro';
 import retro from './retro';
 
 const Themes = [
@@ -35,6 +36,7 @@ const Themes = [
   navyTurquoise,
   neon,
   nord,
+  oneDarkPro,
   retro,
 ];
 
