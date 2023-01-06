@@ -1,10 +1,12 @@
 import { type NextPage } from 'next';
 
-import { Hero, Themes } from '~/components';
+import { Seo, Hero, Themes } from '~/components';
 
 const Home: NextPage = () => {
   return (
     <div>
+      <Seo />
+
       <Hero />
 
       <Themes />
