@@ -2,8 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import type { Theme } from '~/types';
-
-import Icons from '../icons';
+import { Icons } from '~/components';
 
 interface SliderProps {
   name: Theme['name'];
