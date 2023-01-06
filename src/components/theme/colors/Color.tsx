@@ -40,10 +40,10 @@ const Color = ({ color }: ColorProps) => {
         </TooltipPrimitive.Trigger>
 
         <TooltipPrimitive.Content
-          className='radix-side-top:animate-slide-down-fade radix-side-right:animate-slide-left-fade radix-side-bottom:animate-slide-up-fade radix-side-left:animate-slide-right-fade left-4 inline-flex items-center rounded bg-white px-2 py-1 dark:bg-black'
+          className='radix-side-top:animate-slide-down-fade radix-side-right:animate-slide-left-fade radix-side-bottom:animate-slide-up-fade radix-side-left:animate-slide-right-fade left-4 inline-flex items-center rounded bg-white px-2 py-1 shadow-[0_0.125rem_0.375rem_rgba(0,0,0,0.1),_0_0.5rem_1rem_rgba(0,0,0,0.08)] dark:bg-black'
           sideOffset={4}
         >
-          <TooltipPrimitive.Arrow className='fill-black' />
+          <TooltipPrimitive.Arrow className='fill-white dark:fill-black' />
           <span className='block text-xs'>{color}</span>
         </TooltipPrimitive.Content>
       </TooltipPrimitive.Root>
