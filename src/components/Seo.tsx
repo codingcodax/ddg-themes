@@ -14,12 +14,9 @@ const Seo = () => {
         content='Customize DuckDuckGo with your favorite theme, choose from a number of themes and install it.'
         property='og:description'
       />
-      <meta content='https://themes.codingcodax.dev' property='og:url' />
+      <meta content='https://ddg.codingcodax.dev' property='og:url' />
       <meta content='website' property='og:type' />
-      <meta
-        content='https://themes.codingcodax.dev/og.jpg'
-        property='og:image'
-      />
+      <meta content='https://ddg.codingcodax.dev/og.jpg' property='og:image' />
       <meta content='DuckDuckGo Themes og' property='og:image:alt' />
       <meta content='1200' property='og:image:width' />
       <meta content='675' property='og:image:height' />
@@ -30,17 +27,14 @@ const Seo = () => {
       <meta content='@codingcodax' name='twitter:site' />
       <meta content='@codingcodax' name='twitter:creator' />
       <meta content='DuckDuckGo Themes' name='twitter:title' />
-      <meta content='https://themes.codingcodax.dev' property='twitter:url' />
-      <meta
-        content='https://themes.codingcodax.dev/og.jpg'
-        name='twitter:image'
-      />
+      <meta content='https://ddg.codingcodax.dev' property='twitter:url' />
+      <meta content='https://ddg.codingcodax.dev/og.jpg' name='twitter:image' />
 
       <meta content='#de5833' name='msapplication-TileColor' />
       <meta content='#de5833' name='theme-color' />
       <meta content='/favicons/browserconfig.xml' name='msapplication-config' />
 
-      <link href='https://themes.codingcodax.dev' rel='canonical' />
+      <link href='https://ddg.codingcodax.dev' rel='canonical' />
       <link
         href='/favicons/apple-touch-icon.png'
         rel='apple-touch-icon'
