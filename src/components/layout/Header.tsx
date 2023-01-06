@@ -11,8 +11,18 @@ const Header = () => {
       <Link href='/'>
         <Image
           alt='duck duck go themes logo'
+          className='lg:hidden'
           height={32}
           src={`/images/${isDarkMode ? 'logo-dark' : 'logo-light'}.svg`}
+          width={158}
+        />
+        <Image
+          alt='duck duck go themes logo'
+          className='hidden lg:inline-block'
+          height={32}
+          src={`/images/${
+            isDarkMode ? 'logo-desktop-dark' : 'logo-desktop-light'
+            }.svg`}
           width={158}
         />
       </Link>
