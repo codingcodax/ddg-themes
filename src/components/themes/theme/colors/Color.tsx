@@ -34,7 +34,7 @@ const Color = ({ color }: ColorProps) => {
             onClick={handleCopy}
           >
             {isCopied && (
-              <Icons.Check className='h-3 w-3 stroke-[3px] mix-blend-difference invert' />
+              <Icons.Check className='h-3 w-3 stroke-[3px] mix-blend-difference invert dark:invert-0' />
             )}
           </button>
         </TooltipPrimitive.Trigger>
