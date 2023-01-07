@@ -27,7 +27,10 @@ const Themes = () => {
 
   return (
     <section className='mx-auto mt-16 w-full max-w-screen-lg px-4 md:px-8 lg:px-16'>
-      <h2 className='mb-4 text-center md:mb-6 md:text-left' id='themes'>
+      <h2
+        className='mb-4 scroll-m-8 text-center md:mb-6 md:text-left'
+        id='themes'
+      >
         Themes
       </h2>
 
