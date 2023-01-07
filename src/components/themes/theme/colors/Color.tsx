@@ -26,15 +26,18 @@ const Color = ({ color }: ColorProps) => {
         <TooltipPrimitive.Trigger asChild>
           <button
             key={color}
-            className={`inline-flex h-4 w-4 items-center justify-center rounded border ${
+            className={`group inline-flex h-4 w-4 items-center justify-center rounded border ${
               isCopied ? 'cursor-not-allowed' : ''
             }`}
             disabled={isCopied}
             style={{ backgroundColor: color }}
             onClick={handleCopy}
           >
+            {!isCopied && (
+              <Icons.Copy className='hidden h-3.5 w-3.5 stroke-[3px] mix-blend-difference invert group-hover:inline-block dark:invert-0' />
+            )}
             {isCopied && (
-              <Icons.Check className='h-3 w-3 stroke-[3px] mix-blend-difference invert dark:invert-0' />
+              <Icons.Check className='h-3.5 w-3.5 stroke-[3px] mix-blend-difference invert dark:invert-0' />
             )}
           </button>
         </TooltipPrimitive.Trigger>
