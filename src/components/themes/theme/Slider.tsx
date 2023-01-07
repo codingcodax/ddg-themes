@@ -34,17 +34,17 @@ const Slider = ({ name }: SliderProps) => {
         width={1280}
       />
       <button
-        className='absolute top-1/2 left-2 -translate-y-1/2 rounded-lg bg-white/40 p-2 mix-blend-difference hover:bg-white/60 dark:bg-black/40 dark:hover:bg-black/60 sm:hidden sm:group-hover:inline-block'
+        className='absolute top-1/2 left-2 -translate-y-1/2 rounded-lg bg-white/40 p-2 mix-blend-difference hover:bg-white/60 dark:bg-black/40 dark:invert dark:hover:bg-black/60 sm:hidden sm:group-hover:inline-block'
         onClick={() => handleClick('left')}
       >
-        <Icons.NavArrowLeft className='h-4 w-4' />
+        <Icons.NavArrowLeft className='h-4 w-4 stroke-2' />
       </button>
 
       <button
-        className='absolute top-1/2 right-2 -translate-y-1/2 rounded-lg bg-white/40 p-2 mix-blend-difference hover:bg-white/60 dark:bg-black/40 dark:hover:bg-black/60 sm:hidden sm:group-hover:inline-block'
+        className='absolute top-1/2 right-2 -translate-y-1/2 rounded-lg bg-white/40 p-2 mix-blend-difference hover:bg-white/60 dark:bg-black/40 dark:invert dark:hover:bg-black/60 sm:hidden sm:group-hover:inline-block'
         onClick={() => handleClick('right')}
       >
-        <Icons.NavArrowRight className='h-4 w-4' />
+        <Icons.NavArrowRight className='h-4 w-4 stroke-2' />
       </button>
     </figure>
   );
