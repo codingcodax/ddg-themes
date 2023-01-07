@@ -27,11 +27,11 @@ const Themes = () => {
 
   return (
     <section className='mx-auto mt-16 w-full max-w-screen-lg px-4 md:px-8 lg:px-16'>
-      <h2 className='mb-4 text-center md:text-left' id='themes'>
+      <h2 className='mb-4 text-center md:mb-6 md:text-left' id='themes'>
         Themes
       </h2>
 
-      <div className='mb-10 flex space-x-2 px-4 md:w-1/2 md:px-0'>
+      <div className='mb-10 flex space-x-4 px-4 sm:w-3/4 md:mb-12 md:w-3/5 md:px-0'>
         <Searchbar value={search} onChange={handleSearch} />
         <Select value={typeSelected} onValueChange={setTypeSelected} />
       </div>
