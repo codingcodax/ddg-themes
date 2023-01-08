@@ -1,5 +1,13 @@
 type Color = {
-  name: string;
+  name:
+    | 'Background and Header'
+    | 'Background'
+    | 'Header'
+    | 'Title'
+    | 'Visited Title'
+    | 'Snippet'
+    | 'URL'
+    | 'Hover, Module and Dropdown';
   hexCode: string;
 };
 
