@@ -1,7 +1,7 @@
 type Theme = {
   name: string;
   cookie: string;
-  palette: string[];
+  palette: Color[];
   type: 'dark' | 'light';
 };
 
