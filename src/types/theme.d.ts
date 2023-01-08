@@ -1,3 +1,5 @@
+import type Color from './color';
+
 type Theme = {
   name: string;
   cookie: string;
