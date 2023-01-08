@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import * as TooltipPrimitive from '@radix-ui/react-tooltip';
+import * as PopoverPrimitive from '@radix-ui/react-popover';
 
+import type { Color as ColorType } from '~/types';
 import { copyToClipboard } from '~/utils';
-import Icons from '~/components/icons';
 
 interface ColorProps {
-  color: string;
+  color: ColorType;
 }
 
 const Color = ({ color }: ColorProps) => {
@@ -13,7 +13,7 @@ const Color = ({ color }: ColorProps) => {
 
   const handleCopy = () => {
     setIsCopied(true);
-    copyToClipboard(color);
+    copyToClipboard(color.hexCode);
 
     setTimeout(() => {
       setIsCopied(false);
@@ -21,36 +21,39 @@ const Color = ({ color }: ColorProps) => {
   };
 
   return (
-    <TooltipPrimitive.Provider>
-      <TooltipPrimitive.Root>
-        <TooltipPrimitive.Trigger asChild>
-          <button
-            key={color}
-            className={`group inline-flex h-4 w-4 items-center justify-center rounded border ${
-              isCopied ? 'cursor-not-allowed' : ''
-            }`}
-            disabled={isCopied}
-            style={{ backgroundColor: color }}
-            onClick={handleCopy}
-          >
-            {!isCopied && (
-              <Icons.Copy className='hidden h-3.5 w-3.5 stroke-[3px] mix-blend-difference invert group-hover:inline-block dark:invert-0' />
-            )}
-            {isCopied && (
-              <Icons.Check className='h-3.5 w-3.5 stroke-[3px] mix-blend-difference invert dark:invert-0' />
-            )}
-          </button>
-        </TooltipPrimitive.Trigger>
+    <PopoverPrimitive.Root>
+      <PopoverPrimitive.Trigger asChild>
+        <button
+          key={color.name}
+          className={`group inline-flex h-5 w-5 items-center justify-center rounded border ${
+            isCopied ? 'cursor-not-allowed' : ''
+          }`}
+          style={{ backgroundColor: color.hexCode }}
+        />
+      </PopoverPrimitive.Trigger>
 
-        <TooltipPrimitive.Content
-          className='radix-side-top:animate-slide-down-fade radix-side-right:animate-slide-left-fade radix-side-bottom:animate-slide-up-fade radix-side-left:animate-slide-right-fade left-4 inline-flex items-center rounded bg-white px-2 py-1 shadow-[0_0.125rem_0.375rem_rgba(0,0,0,0.1),_0_0.5rem_1rem_rgba(0,0,0,0.08)] dark:bg-black'
-          sideOffset={4}
+      <PopoverPrimitive.Content
+        className='radix-side-top:animate-slide-down-fade radix-side-right:animate-slide-left-fade radix-side-bottom:animate-slide-up-fade radix-side-left:animate-slide-right-fade left-4 inline-flex items-center rounded bg-white px-2 py-1 shadow-[0_0.125rem_0.375rem_rgba(0,0,0,0.1),_0_0.5rem_1rem_rgba(0,0,0,0.08)] dark:bg-black'
+        side='top'
+        sideOffset={4}
+      >
+        <PopoverPrimitive.Arrow className='fill-white dark:fill-black' />
+        <span className='block text-sm sm:text-xs'>
+          {color.name}: {color.hexCode}{' '}
+        </span>
+        <button
+          className={`primary-link ml-2 w-12 text-sm sm:text-xs ${
+            isCopied
+              ? 'cursor-not-allowed text-green-50 hover:text-green-50 dark:text-green-30 dark:hover:text-green-30'
+              : ''
+          }`}
+          disabled={isCopied}
+          onClick={handleCopy}
         >
-          <TooltipPrimitive.Arrow className='fill-white dark:fill-black' />
-          <span className='block text-xs'>{color}</span>
-        </TooltipPrimitive.Content>
-      </TooltipPrimitive.Root>
-    </TooltipPrimitive.Provider>
+          {isCopied ? 'Copied!' : 'Copy'}
+        </button>
+      </PopoverPrimitive.Content>
+    </PopoverPrimitive.Root>
   );
 };
 
