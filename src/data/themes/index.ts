@@ -19,6 +19,7 @@ import neon from './neon';
 import nord from './nord';
 import oneDarkPro from './oneDarkPro';
 import retro from './retro';
+import winterIsComingDark from './winterIsComingDark';
 import winterIsComingDarkBlue from './winterIsComingDarkBlue';
 
 const Themes = [
@@ -43,6 +44,7 @@ const Themes = [
   nord,
   oneDarkPro,
   retro,
+  winterIsComingDark,
   winterIsComingDarkBlue,
 ];
 
