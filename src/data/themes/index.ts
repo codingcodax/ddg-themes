@@ -10,6 +10,7 @@ import cyberpunkScarlet from './cyberpunkScarlet';
 import cyberpunkUmbra from './cyberpunkUmbra';
 import dracula from './dracula';
 import githubDark from './githubDark';
+import githubLight from './githubLight';
 import gruvboxDark from './gruvbox-dark';
 import gruvboxLight from './gruvbox-light';
 import hack from './hack';
@@ -32,6 +33,7 @@ const Themes = [
   cyberpunkUmbra,
   dracula,
   githubDark,
+  githubLight,
   gruvboxDark,
   gruvboxLight,
   hack,
