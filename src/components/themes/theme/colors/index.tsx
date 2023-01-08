@@ -8,9 +8,9 @@ interface ColorsProps {
 
 const Colors = ({ palette }: ColorsProps) => {
   return (
-    <div className='grid grid-flow-col items-center gap-x-1'>
+    <div className='grid grid-flow-col items-center gap-x-1.5 sm:gap-x-1'>
       {palette.map((color) => (
-        <Color key={color} color={color} />
+        <Color key={color.name} color={color} />
       ))}
     </div>
   );
