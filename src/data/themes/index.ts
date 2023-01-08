@@ -19,6 +19,7 @@ import neon from './neon';
 import nord from './nord';
 import oneDarkPro from './oneDarkPro';
 import retro from './retro';
+import winterIsComingDarkBlue from './winterIsComingDarkBlue';
 
 const Themes = [
   ayuDark,
@@ -42,6 +43,7 @@ const Themes = [
   nord,
   oneDarkPro,
   retro,
+  winterIsComingDarkBlue,
 ];
 
 export default Themes;
