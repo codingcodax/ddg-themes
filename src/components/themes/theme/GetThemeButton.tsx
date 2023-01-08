@@ -21,7 +21,7 @@ const GetThemeButton = ({ name, cookie }: GetThemeButtonProps) => {
   };
   return (
     <button
-      className={`ghost-button flex items-center text-sm ${
+      className={`ghost-button hidden items-center text-sm sm:flex ${
         isCopied
           ? 'cursor-not-allowed text-green-50 hover:bg-green-60/20 hover:text-green-60 dark:text-green-30 dark:hover:bg-green-40/20 dark:hover:text-green-40'
           : ''
