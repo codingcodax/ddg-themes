@@ -21,6 +21,7 @@ import oneDarkPro from './oneDarkPro';
 import retro from './retro';
 import winterIsComingDark from './winterIsComingDark';
 import winterIsComingDarkBlue from './winterIsComingDarkBlue';
+import winterIsComingLight from './winterIsComingLight';
 
 const Themes = [
   ayuDark,
@@ -46,6 +47,7 @@ const Themes = [
   retro,
   winterIsComingDark,
   winterIsComingDarkBlue,
+  winterIsComingLight,
 ];
 
 export default Themes;
