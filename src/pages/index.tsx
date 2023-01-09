@@ -1,6 +1,6 @@
 import { type NextPage } from 'next';
 
-import { Seo, Hero, Themes } from '~/components';
+import { Seo, Hero, Themes, HowToUse } from '~/components';
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +10,8 @@ const Home: NextPage = () => {
       <Hero />
 
       <Themes />
+
+      <HowToUse />
     </div>
   );
 };
