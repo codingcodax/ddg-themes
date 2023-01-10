@@ -16,7 +16,7 @@ const Seo = () => {
       />
       <meta content='https://ddg.codingcodax.dev' property='og:url' />
       <meta content='website' property='og:type' />
-      <meta content='https://ddg.codingcodax.dev/og.jpg' property='og:image' />
+      <meta content='https://ddg.codingcodax.dev/og.png' property='og:image' />
       <meta content='DuckDuckGo Themes og' property='og:image:alt' />
       <meta content='1200' property='og:image:width' />
       <meta content='675' property='og:image:height' />
@@ -28,7 +28,7 @@ const Seo = () => {
       <meta content='@codingcodax' name='twitter:creator' />
       <meta content='DuckDuckGo Themes' name='twitter:title' />
       <meta content='https://ddg.codingcodax.dev' property='twitter:url' />
-      <meta content='https://ddg.codingcodax.dev/og.jpg' name='twitter:image' />
+      <meta content='https://ddg.codingcodax.dev/og.png' name='twitter:image' />
 
       <meta content='#de5833' name='msapplication-TileColor' />
       <meta content='#de5833' name='theme-color' />
