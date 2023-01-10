@@ -15,9 +15,15 @@ const Hero = () => {
           themes and install it.
         </p>
 
-        <Link className='primary-button mt-8' href='#themes'>
-          Explore the Themes
-        </Link>
+        <div className='mt-8 space-x-4'>
+          <Link className='primary-button' href='#themes'>
+            Explore the Themes
+          </Link>
+
+          <Link className='ghost-button' href='#howToUse'>
+            How to Use
+          </Link>
+        </div>
       </section>
 
       <figure className='mx-auto max-w-lg px-4 md:flex md:items-center md:px-0'>
