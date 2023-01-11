@@ -19,11 +19,11 @@ const Header = () => {
         <Image
           alt='duck duck go themes logo'
           className='hidden lg:inline-block'
-          height={32}
+          height={54}
           src={`/images/${
             isDarkMode ? 'logo-desktop-dark' : 'logo-desktop-light'
           }.svg`}
-          width={158}
+          width={195}
         />
       </Link>
     </header>
